@@ -69,9 +69,9 @@ function Menu(){
 
   return <main className='menu'>
   <h2>Fast Pizza Co.</h2>
-  {numPizzas > 0 && (<ul className="pizzas">
+  {numPizzas > 0 ? (<ul className="pizzas">
     {pizzaData.map(pizza => <Pizza pizzaObj = {pizza} key={pizza.name} />)}
-  </ul>)}
+  </ul>): <p>We are still working on our menu. Please come back later:) .</p>}
   {/* <Pizza name="Pizza Spinacci" ingredients="Tomato, mozarella, spinach and ricotta cheese" 
   photoName="pizzas/spinaci.jpg" price = {10} />
   <Pizza name="Pizza Funghi" ingredients="Tomato, Mushrooms" photoName="pizzas/funghi.jpg" price = {12}/> */}
